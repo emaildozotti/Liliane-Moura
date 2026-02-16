@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liliane Moura | Mentoria de Posicionamento & Liderança Feminina</title>
+    <meta name="description"
+        content="Mentoria de Posicionamento & Liderança Feminina. Construa o chão seguro para ocupar o lugar que já é seu por direito.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A3B32', // Deep Earthy Brown
+                        secondary: '#A07E66', // Muted Terracotta
+                        secondaryDark: '#8C6D57',
+                        surface: '#FAFAF9', // Off-white
+                        surfaceAlt: '#F5F5F0', // Light Beige
+                        textBody: '#1F2937', // Dark Charcoal
+                        textMuted: '#6B7280',
+                        accent: '#D4C4B7', // Soft Beige/Goldish
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    maxWidth: {
+                        '8xl': '88rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles for Animations -->
+    <style>
+        /* Base Smoothness */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Fade In Up Animation Classes */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered delays for grid items */
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FAFAF9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #D4C4B7;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A07E66;
+        }
+
+        /* Accordion open state transition */
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body class="bg-surface text-textBody font-sans selection:bg-secondary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-surface/90 backdrop-blur-md border-b border-stone-200/50"
+        id="navbar">
+        <div class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-serif text-2xl text-primary font-semibold tracking-wide">
+                Liliane Moura
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#metodologia"
+                    class="text-sm uppercase tracking-widest text-primary/80 hover:text-secondary transition-colors">Metodologia</a>
+                <a href="#sobre"
+                    class="text-sm uppercase tracking-widest text-primary/80 hover:text-secondary transition-colors">Sobre</a>
+                <a href="#faq"
+                    class="text-sm uppercase tracking-widest text-primary/80 hover:text-secondary transition-colors">FAQ</a>
+                <a href="https://wa.me/5511954634462?text=Ol%C3%A1%20Liliane%2C%20vim%20pelo%20site%20e%20j%C3%A1%20preenchi%20o%20formul%C3%A1rio.%20Gostaria%20de%20agendar%20minha%20sess%C3%A3o%20estrat%C3%A9gica."
+                    class="bg-primary text-white px-6 py-2.5 rounded-sm font-medium text-sm hover:bg-secondary transition-colors duration-300 shadow-sm">
+                    Agendar Horário
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-primary focus:outline-none" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- BLOCO 1: HERO SECTION -->
+    <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-surface">
+        <div class="absolute inset-0 z-0 opacity-30">
+            <!-- Abstract subtle texture or noise could go here -->
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
+                alt="Background texture" class="w-full h-full object-cover grayscale opacity-20">
+        </div>
+
+        <div class="max-w-screen-xl mx-auto px-6 relative z-10 w-full grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8 reveal-on-scroll">
+                <span class="inline-block text-secondary font-semibold tracking-[0.2em] text-[10px] uppercase mb-2">
+                    Mentoria de Posicionamento & Liderança Feminina
+                </span>
+
+                <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-primary leading-tight">
+                    Você já é potente. <br>
+                    <span class="italic text-secondary">Eu te ajudo a sustentar isso.</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-textBody/80 font-light leading-relaxed max-w-lg">
+                    O medo de crescer, de se expor e de liderar não é falta de capacidade. É falta de base emocional.
+                    Construa o chão seguro para ocupar o lugar que já é seu por direito — sem colapsar.
+                </p>
+
+                <div class="pt-4">
+                    <a href="https://wa.me/5511954634462?text=Ol%C3%A1%20Liliane%2C%20vim%20pelo%20site%20e%20j%C3%A1%20preenchi%20o%20formul%C3%A1rio.%20Gostaria%20de%20agendar%20minha%20sess%C3%A3o%20estrat%C3%A9gica."
+                        class="inline-block bg-secondary text-white text-center px-10 py-4 rounded-sm font-serif text-lg tracking-wide hover:bg-secondaryDark transition-all duration-300 shadow-soft hover:shadow-lg hover:-translate-y-1">
+                        AGENDAR MEU HORÁRIO
+                    </a>
+                    <p class="mt-4 text-xs text-textMuted uppercase tracking-wider">Última etapa: Sessão Estratégica</p>
+                </div>
+            </div>
+
+            <div class="relative h-[600px] hidden md:block reveal-on-scroll delay-200">
+                <div
+                    class="absolute inset-0 bg-accent/20 translate-x-4 translate-y-4 rounded-tl-[100px] rounded-br-[20px]">
+                </div>
+                <img src="https://i.imgur.com/XUpGfyC.jpeg" alt="Liliane Moura - Mentoria de Posicionamento"
+                    class="w-full h-full object-cover rounded-tl-[100px] rounded-br-[20px] shadow-2xl transition-all duration-700">
+            </div>
+        </div>
+    </header>
+
+    <!-- BLOCO 2: A IDENTIFICAÇÃO -->
+    <section class="py-24 bg-surfaceAlt">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16 reveal-on-scroll">
+                <h2 class="font-serif text-4xl md:text-5xl text-primary mb-6">Você sente que poderia estar maior do que
+                    está?</h2>
+                <p class="text-lg text-textBody/80 leading-relaxed">
+                    Você é competente. Resolve problemas complexos, cuida de todos e sustenta estruturas pesadas. Mas
+                    existe um lugar onde você trava: na sua própria expansão. Talvez você se reconheça em um desses
+                    cenários:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <!-- Card 1 -->
+                <div
+                    class="bg-surface p-10 rounded-lg shadow-soft border border-stone-100 hover:border-secondary/30 transition-all duration-300 reveal-on-scroll">
+                    <div
+                        class="w-12 h-12 bg-stone-200 rounded-full flex items-center justify-center mb-6 text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-primary mb-3">O "Teto de Vidro" Invisível</h3>
+                    <p class="text-textBody/80">Você vê oportunidades de crescimento, mas recua na hora H porque uma voz
+                        interna diz: "E se eu subir e não der conta de sustentar?"</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-surface p-10 rounded-lg shadow-soft border border-stone-100 hover:border-secondary/30 transition-all duration-300 reveal-on-scroll delay-100">
+                    <div
+                        class="w-12 h-12 bg-stone-200 rounded-full flex items-center justify-center mb-6 text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-primary mb-3">A Exaustão da Máscara</h3>
+                    <p class="text-textBody/80">Você lidera e performa, mas morre de medo de ser "descoberta". Sente que
+                        é uma fraude e que, a qualquer momento, todos verão suas fragilidades.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-surface p-10 rounded-lg shadow-soft border border-stone-100 hover:border-secondary/30 transition-all duration-300 reveal-on-scroll">
+                    <div
+                        class="w-12 h-12 bg-stone-200 rounded-full flex items-center justify-center mb-6 text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94A3 3 0 1119.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 002.112 2.13" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-primary mb-3">Silêncio por Proteção</h3>
+                    <p class="text-textBody/80">Em reuniões ou redes sociais, você se cala quando deveria falar. Prefere
+                        o conforto do anonimato à vertigem da exposição.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-surface p-10 rounded-lg shadow-soft border border-stone-100 hover:border-secondary/30 transition-all duration-300 reveal-on-scroll delay-100">
+                    <div
+                        class="w-12 h-12 bg-stone-200 rounded-full flex items-center justify-center mb-6 text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-primary mb-3">Paralisia na Decisão</h3>
+                    <p class="text-textBody/80">Você sabe o que precisa fazer para crescer, mas seu corpo congela. A
+                        ansiedade toma conta e você procrastina o inevitável.</p>
+                </div>
+            </div>
+
+            <div class="text-center reveal-on-scroll">
+                <p
+                    class="text-xl md:text-2xl font-serif italic text-primary border-t border-b border-primary/10 inline-block py-6 px-4">
+                    "Não é que você não saiba o caminho. É que seu sistema nervoso entende o sucesso como perigo."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="py-24 bg-surface">
+        <div class="max-w-4xl mx-auto px-6 text-center reveal-on-scroll">
+            <h2 class="font-serif text-4xl md:text-5xl text-primary mb-12 max-w-2xl mx-auto leading-tight">
+                O passo <span class="italic text-secondary">indispensável</span> para ocupar seu lugar: assista agora.
+            </h2>
+            <div class="relative w-full max-w-2xl mx-auto shadow-2xl rounded-xl overflow-hidden bg-stone-100"
+                style="padding-bottom: 100%; height: 0;">
+                <iframe id="js_video_iframe" src="https://jumpshare.com/embed/ca5fnTXc4p4cYf9y2dJU" frameborder="0"
+                    webkitallowfullscreen mozallowfullscreen allowfullscreen
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO 3: A METODOLOGIA -->
+    <section id="metodologia" class="py-24 bg-primary text-surface">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+                <div class="reveal-on-scroll sticky top-24">
+                    <span class="text-secondary text-sm tracking-widest uppercase mb-4 block">O Método</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-surface mb-6 leading-tight">Cura não é virar outra
+                        pessoa. <br>É sustentar quem você já é.</h2>
+                    <p class="text-surface/80 text-lg leading-relaxed mb-8">
+                        Muitas abordagens tentam te "consertar" ou te forçar a performar sob pressão. O meu método é o
+                        oposto. Nós trabalhamos a Regulação Emocional para que seu corpo e sua mente se sintam seguros
+                        no lugar de destaque.
+                    </p>
+                    <a href="https://wa.me/5511954634462?text=Ol%C3%A1%20Liliane%2C%20vim%20pelo%20site%20e%20j%C3%A1%20preenchi%20o%20formul%C3%A1rio.%20Gostaria%20de%20agendar%20minha%20sess%C3%A3o%20estrat%C3%A9gica."
+                        class="text-secondary hover:text-white transition-colors border-b border-secondary pb-1 inline-block">Agendar
+                        minha sessão &rarr;</a>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- Pillar 1 -->
+                    <div
+                        class="bg-surface/5 p-8 rounded border border-surface/10 hover:border-secondary/50 transition-colors reveal-on-scroll">
+                        <span class="text-5xl font-serif text-secondary/20 mb-4 block">01</span>
+                        <h3 class="text-2xl font-serif text-surface mb-3">A Base Segura (Regulação)</h3>
+                        <p class="text-surface/70 leading-relaxed">
+                            Ensinamos seu corpo a sair do estado de alerta/medo. Você aprenderá a acalmar o sistema
+                            nervoso para que a exposição deixe de ser uma ameaça e vire uma expressão natural.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div
+                        class="bg-surface/5 p-8 rounded border border-surface/10 hover:border-secondary/50 transition-colors reveal-on-scroll delay-100">
+                        <span class="text-5xl font-serif text-secondary/20 mb-4 block">02</span>
+                        <h3 class="text-2xl font-serif text-surface mb-3">A Raiz do Bloqueio (Trauma e Feridas)</h3>
+                        <p class="text-surface/70 leading-relaxed">
+                            Identificamos e acolhemos as feridas de rejeição e abandono que gritam quando você tenta
+                            crescer. Não lutamos contra o medo; nós o destituímos de poder.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div
+                        class="bg-surface/5 p-8 rounded border border-surface/10 hover:border-secondary/50 transition-colors reveal-on-scroll delay-200">
+                        <span class="text-5xl font-serif text-secondary/20 mb-4 block">03</span>
+                        <h3 class="text-2xl font-serif text-surface mb-3">O Posicionamento (Expansão)</h3>
+                        <p class="text-surface/70 leading-relaxed">
+                            Com a base firme, trabalhamos sua comunicação, sua liderança e sua marca pessoal. Você vai
+                            falar, cobrar e liderar com a firmeza de quem sabe quem é.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO 4: QUEM É A MENTORA -->
+    <section id="sobre" class="py-24 bg-surfaceAlt overflow-hidden">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5 order-2 md:order-1 reveal-on-scroll">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-full h-full border-2 border-primary/10 rounded-sm"></div>
+                        <img src="https://i.imgur.com/zIkJPgZ.jpeg" alt="Liliane Moura"
+                            class="w-full h-auto rounded-sm shadow-soft relative z-10 grayscale-[10%]">
+                    </div>
+                </div>
+                <div class="md:col-span-7 order-1 md:order-2 space-y-6 reveal-on-scroll delay-100">
+                    <span class="text-secondary text-sm tracking-widest uppercase">Quem é a mentora</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-primary leading-tight">Eu conheço o medo da queda.
+                    </h2>
+
+                    <div class="text-textBody/80 space-y-4 leading-relaxed font-light">
+                        <p>Eu não nasci destemida. Eu nasci com medo.</p>
+                        <p>Medo de não ser capaz. Medo de ser vista. E, principalmente, o medo de crescer e não
+                            sustentar a própria grandeza.</p>
+                        <p>Durante anos, eu fugi da minha potência. A minha mente controladora dizia: "Fique pequena, é
+                            mais seguro aqui."</p>
+                        <p>A virada não aconteceu com um livro de autoajuda, mas com a consciência de que o medo era uma
+                            construção, não um fato. Eu decidi me autorizar. Treinei diretores, assumi minha voz e
+                            descobri que o medo não desaparece, mas ele para de governar.</p>
+                        <p class="font-medium text-primary">Hoje, eu sou a base segura para mulheres que, assim como eu,
+                            decidiram parar de pedir permissão para existirem em sua potência máxima.</p>
+                    </div>
+
+                    <div class="pt-6 border-t border-primary/10">
+                        <p class="font-serif text-2xl text-primary">Liliane Moura</p>
+                        <p class="text-sm text-textMuted uppercase tracking-wider mt-1">Especialista em Posicionamento,
+                            Regulação Emocional e Liderança Feminina</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO 5: COMO FUNCIONA -->
+    <section class="py-24 bg-surface relative">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+                <h2 class="font-serif text-4xl text-primary mb-4">O caminho para sua sustentação</h2>
+                <p class="text-textBody/70">Este não é um produto de prateleira. É um processo profundo e personalizado.
+                    Por isso, trabalhamos com Aplicação.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <!-- Connecting Line (Desktop) -->
+                <div
+                    class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-stone-200 to-transparent -z-10">
+                </div>
+
+                <!-- Step 1 -->
+                <div
+                    class="bg-white p-8 rounded-lg shadow-sm border border-stone-100 text-center reveal-on-scroll group hover:-translate-y-2 transition-transform duration-500">
+                    <div
+                        class="w-16 h-16 bg-surfaceAlt rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-serif text-primary border border-stone-200 group-hover:border-secondary transition-colors">
+                        1</div>
+                    <h3 class="font-serif text-xl text-primary mb-3">Aplicação Recebida</h3>
+                    <p class="text-sm text-textBody/70 leading-relaxed">
+                        Você já deu o primeiro passo. Seu formulário foi registrado e nossa análise de perfil já está em
+                        andamento para garantir que este é o seu momento de expansão.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div
+                    class="bg-white p-8 rounded-lg shadow-sm border border-stone-100 text-center reveal-on-scroll delay-100 group hover:-translate-y-2 transition-transform duration-500">
+                    <div
+                        class="w-16 h-16 bg-surfaceAlt rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-serif text-primary border border-stone-200 group-hover:border-secondary transition-colors">
+                        2</div>
+                    <h3 class="font-serif text-xl text-primary mb-3">Agendar Horário</h3>
+                    <p class="text-sm text-textBody/70 leading-relaxed">
+                        Este é o passo decisivo. Agora, você deve agendar sua sessão estratégica para validarmos sua
+                        entrada na mentoria e desenharmos seu plano de sustentação.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div
+                    class="bg-white p-8 rounded-lg shadow-sm border border-stone-100 text-center reveal-on-scroll delay-200 group hover:-translate-y-2 transition-transform duration-500">
+                    <div
+                        class="w-16 h-16 bg-surfaceAlt rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-serif text-primary border border-stone-200 group-hover:border-secondary transition-colors">
+                        3</div>
+                    <h3 class="font-serif text-xl text-primary mb-3">Começar a Jornada</h3>
+                    <p class="text-sm text-textBody/70 leading-relaxed">
+                        Com a aprovação na sessão, sua jornada começa oficialmente. Você terá acesso às ferramentas para
+                        sustentar sua potência e liderar com autoridade absoluta.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 reveal-on-scroll">
+                <a href="https://wa.me/5511954634462?text=Ol%C3%A1%20Liliane%2C%20vim%20pelo%20site%20e%20j%C3%A1%20preenchi%20o%20formul%C3%A1rio.%20Gostaria%20de%20agendar%20minha%20sess%C3%A3o%20estrat%C3%A9gica."
+                    class="inline-block bg-primary text-white text-center px-10 py-3 rounded-sm font-medium tracking-wide hover:bg-secondary transition-colors duration-300">
+                    AGENDAR MEU HORÁRIO AGORA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO 6: DEPOIMENTOS -->
+    <section class="py-24 bg-surfaceAlt">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-4xl text-primary text-center mb-16 reveal-on-scroll">O que dizem quem
+                já ocupou seu lugar</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-surface p-10 rounded-tl-3xl rounded-br-3xl shadow-soft reveal-on-scroll">
+                    <svg class="w-8 h-8 text-secondary/40 mb-4 transform -scale-x-100" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z">
+                        </path>
+                    </svg>
+                    <p class="font-serif text-lg text-primary italic mb-6 leading-relaxed">
+                        "Eu achava que precisava fazer mais um curso para ter coragem. A Liliane me mostrou que a
+                        coragem vem da regulação, não do intelecto. Hoje lidero minha equipe sem sentir que vou
+                        desmaiar."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-1 rounded-full bg-secondary"></div>
+                        <p class="text-xs font-bold uppercase tracking-widest text-textBody">M.C., Executiva</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-surface p-10 rounded-tl-3xl rounded-br-3xl shadow-soft reveal-on-scroll delay-100">
+                    <svg class="w-8 h-8 text-secondary/40 mb-4 transform -scale-x-100" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z">
+                        </path>
+                    </svg>
+                    <p class="font-serif text-lg text-primary italic mb-6 leading-relaxed">
+                        "Sempre tive medo de aparecer nos stories e ser julgada. O trabalho com a ferida da rejeição foi
+                        a chave que virou. Hoje posto, falo e vendo com leveza."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-1 rounded-full bg-secondary"></div>
+                        <p class="text-xs font-bold uppercase tracking-widest text-textBody">A.S., Empreendedora</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO 7: FAQ -->
+    <section id="faq" class="py-24 bg-surface">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-4xl text-primary text-center mb-12 reveal-on-scroll">Perguntas
+                Frequentes</h2>
+
+            <div class="space-y-4">
+                <!-- Item 1 -->
+                <details class="group bg-surfaceAlt rounded-lg overflow-hidden reveal-on-scroll">
+                    <summary
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-primary hover:text-secondary transition-colors">
+                        <span class="font-serif text-lg">É terapia ou mentoria?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                                width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="text-textBody/80 px-6 pb-6 leading-relaxed animate-fadeIn">
+                        É um processo híbrido. Usamos a profundidade da terapia (olhando para traumas e emoções) com o
+                        direcionamento prático da mentoria (olhando para carreira e posicionamento).
+                    </div>
+                </details>
+
+                <!-- Item 2 -->
+                <details class="group bg-surfaceAlt rounded-lg overflow-hidden reveal-on-scroll">
+                    <summary
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-primary hover:text-secondary transition-colors">
+                        <span class="font-serif text-lg">O atendimento é online? Funciona?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                                width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="text-textBody/80 px-6 pb-6 leading-relaxed">
+                        Sim, 100% online. A regulação emocional funciona perfeitamente à distância, desde que você tenha
+                        um espaço de privacidade onde se sinta segura.
+                    </div>
+                </details>
+
+                <!-- Item 3 -->
+                <details class="group bg-surfaceAlt rounded-lg overflow-hidden reveal-on-scroll">
+                    <summary
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-primary hover:text-secondary transition-colors">
+                        <span class="font-serif text-lg">Eu não tenho um cargo de liderança, é para mim?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                                width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="text-textBody/80 px-6 pb-6 leading-relaxed">
+                        Se você deseja crescer e sente que está travada pelo medo, sim. Liderança começa liderando a si
+                        mesma.
+                    </div>
+                </details>
+
+                <!-- Item 4 -->
+                <details class="group bg-surfaceAlt rounded-lg overflow-hidden reveal-on-scroll">
+                    <summary
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-primary hover:text-secondary transition-colors">
+                        <span class="font-serif text-lg">Qual a duração do processo?</span>
+                        <span class="transition group-open:rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"
+                                width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="text-textBody/80 px-6 pb-6 leading-relaxed">
+                        Cada mulher tem seu tempo, mas trabalhamos com ciclos de desenvolvimento. Na nossa conversa
+                        inicial, definiremos o melhor formato para você.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO 8: RODAPÉ FINAL (CTA) -->
+    <footer id="aplicacao" class="bg-primary text-surface pt-24 pb-12">
+        <div class="max-w-screen-xl mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto mb-12 reveal-on-scroll">
+                <h2 class="font-serif text-4xl md:text-5xl mb-6">O mundo precisa da mulher que você está escondendo.
+                </h2>
+                <p class="text-xl text-surface/70 font-light mb-10">
+                    Chega de guardar sua potência para "um dia". Vamos construir sua base agora.
+                </p>
+                <a href="https://wa.me/5511954634462?text=Ol%C3%A1%20Liliane%2C%20vim%20pelo%20site%20e%20j%C3%A1%20preenchi%20o%20formul%C3%A1rio.%20Gostaria%20de%20agendar%20minha%20sess%C3%A3o%20estrat%C3%A9gica."
+                    class="inline-block bg-secondary text-white px-12 py-5 rounded-sm font-serif text-xl tracking-wide hover:bg-white hover:text-primary transition-all duration-300 shadow-lg">
+                    AGENDAR MEU HORÁRIO AGORA
+                </a>
+            </div>
+
+            <div
+                class="border-t border-surface/10 pt-8 mt-16 flex flex-col md:flex-row justify-between items-center text-sm text-surface/50">
+                <p>&copy; 2024 Liliane Moura. Todos os direitos reservados.</p>
+                <div class="space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-surface transition-colors">Política de Privacidade</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-surface transition-colors">Contato</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVITY SCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-soft');
+                    navbar.classList.replace('py-4', 'py-2');
+                } else {
+                    navbar.classList.remove('shadow-soft');
+                    navbar.classList.replace('py-2', 'py-4');
+                }
+            });
+
+            // Smooth Reveal Animation
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Once revealed, stop observing
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            revealElements.forEach(el => observer.observe(el));
+
+            // Smooth scrolling for anchor links (polyfill-like behavior for older browsers/Safari)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
